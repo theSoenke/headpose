@@ -28,6 +28,8 @@ class Hopenet(nn.Module):
         self.fc_pitch = nn.Linear(512 * block.expansion, num_bins)
         self.fc_roll = nn.Linear(512 * block.expansion, num_bins)
 
+        self.fc_finetune = nn.Linear(512 * block.expansion + 3, 3)
+
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
                 nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
