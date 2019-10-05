@@ -58,7 +58,7 @@ class HeadPose():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--checkpoint', default='data/hopenet_robust_alpha1.pkl', type=str)
+    parser.add_argument('--checkpoint', default='data/hopenet.pkl', type=str)
     parser.add_argument('--image', type=str)
     args = parser.parse_args()
 
